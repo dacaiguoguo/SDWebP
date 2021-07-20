@@ -33,7 +33,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
-  - VendorsSet (from `https://github.com/dacaiguoguo/SDWebP.git`, branch `main`)
+  - VendorsSet (from `.`)
 
 SPEC REPOS:
   trunk:
@@ -42,19 +42,13 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   VendorsSet:
-    :branch: main
-    :git: https://github.com/dacaiguoguo/SDWebP.git
-
-CHECKOUT OPTIONS:
-  VendorsSet:
-    :commit: 1d3352dd3aee2ce8c1f97bfb5a290dbd00c27ae1
-    :git: https://github.com/dacaiguoguo/SDWebP.git
+    :path: "."
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   libwebp: e90b9c01d99205d03b6bb8f2c8c415e5a4ef66f0
   VendorsSet: a5a741faeafd473cd5880515e0b45d9e6671097c
 
-PODFILE CHECKSUM: ecde28640e5c409f2b9b97acbfaa4ebeb9a4d934
+PODFILE CHECKSUM: 12567afbabb790ea0622c652124d9791fa1ee93c
 
 COCOAPODS: 1.10.0

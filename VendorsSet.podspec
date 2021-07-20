@@ -12,7 +12,8 @@ Pod::Spec.new do |s|
   s.source           = { git: 'http://github.com/ios_vendor/VendorsSet.git', tag: s.version.to_s }
   s.ios.deployment_target = '9.0'
 
-  # s.module_map = 'SDWebImageWebPCoder/Module/SDWebImageWebPCoder.modulemap'
+  # 变成子模块了不能用了
+  # s.module_map = 'LVPods/SDWebImageWebPCoder/SDWebImageWebPCoder/Module/SDWebImageWebPCoder.modulemap'
 
   s.subspec 'SDWebImage' do |sdsub|
     sdsub.pod_target_xcconfig = {
