@@ -1,0 +1,67 @@
+{
+  "name": "LvmmVendors",
+  "version": "1.0.5lvmama",
+  "summary": "A short description of LvmmVendors.",
+  "description": "第三方库集合",
+  "homepage": "http://lvioscode.com/ios_vendor/LvmmVendors",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "niewei": "niewei@lvmama.com"
+  },
+  "source": {
+    "git": "http://lvioscode.com/ios_vendor/LvmmVendors.git",
+    "tag": "1.0.5lvmama"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "subspecs": [
+    {
+      "name": "SDWebImage",
+      "pod_target_xcconfig": {
+        "SUPPORTS_MACCATALYST": "YES",
+        "DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER": "NO"
+      },
+      "source_files": [
+        "LVPods/SDWebImage/SDWebImage/Core/*.{h,m}",
+        "LVPods/SDWebImage/WebImage/SDWebImage.h",
+        "LVPods/SDWebImage/SDWebImage/Private/*.{h,m}"
+      ],
+      "private_header_files": "LVPods/SDWebImage/SDWebImage/Private/*.h"
+    },
+    {
+      "name": "SDWebImageWebPCoder",
+      "platforms": {
+        "ios": "9.0",
+        "osx": "10.11",
+        "tvos": "9.0",
+        "watchos": "2.0"
+      },
+      "source_files": [
+        "LVPods/SDWebImageWebPCoder/SDWebImageWebPCoder/Classes/**/*",
+        "LVPods/SDWebImageWebPCoder/SDWebImageWebPCoder/Module/SDWebImageWebPCoder.h"
+      ],
+      "xcconfig": {
+        "GCC_PREPROCESSOR_DEFINITIONS": "$(inherited) SD_WEBP=1",
+        "USER_HEADER_SEARCH_PATHS": "$(inherited) $(SRCROOT)/libwebp/src"
+      },
+      "watchos": {
+        "xcconfig": {
+          "GCC_PREPROCESSOR_DEFINITIONS": "$(inherited) SD_WEBP=1 WEBP_USE_INTRINSICS=1",
+          "USER_HEADER_SEARCH_PATHS": "$(inherited) $(SRCROOT)/libwebp/src"
+        }
+      },
+      "dependencies": {
+        "LvmmVendors/SDWebImage": [
+
+        ],
+        "libwebp": [
+          "~> 1.0"
+        ]
+      }
+    }
+  ]
+}

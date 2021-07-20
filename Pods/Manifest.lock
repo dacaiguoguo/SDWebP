@@ -1,0 +1,54 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - libwebp (1.2.0):
+    - libwebp/demux (= 1.2.0)
+    - libwebp/mux (= 1.2.0)
+    - libwebp/webp (= 1.2.0)
+  - libwebp/demux (1.2.0):
+    - libwebp/webp
+  - libwebp/mux (1.2.0):
+    - libwebp/demux
+  - libwebp/webp (1.2.0)
+  - VendorsSet (1.0.0):
+    - VendorsSet/SDWebImage (= 1.0.0)
+    - VendorsSet/SDWebImageWebPCoder (= 1.0.0)
+  - VendorsSet/SDWebImage (1.0.0)
+  - VendorsSet/SDWebImageWebPCoder (1.0.0):
+    - libwebp (~> 1.0)
+    - VendorsSet/SDWebImage
+
+DEPENDENCIES:
+  - AFNetworking
+  - VendorsSet (from `.`)
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - libwebp
+
+EXTERNAL SOURCES:
+  VendorsSet:
+    :path: "."
+
+SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  libwebp: e90b9c01d99205d03b6bb8f2c8c415e5a4ef66f0
+  VendorsSet: a5a741faeafd473cd5880515e0b45d9e6671097c
+
+PODFILE CHECKSUM: ee089179dfe0b65e99cba0da4f0b57f52e74c0c3
+
+COCOAPODS: 1.10.0
