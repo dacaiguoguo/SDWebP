@@ -17,7 +17,11 @@
     [super viewDidLoad];
     UIImageView *bgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:bgView];
-    [bgView sd_setImageWithURL:[NSURL URLWithString:@"http://testabc.com/download/test.webp"]];
+    SDImageWebPCoder *webPCoder = [SDImageWebPCoder sharedCoder];
+    [[SDImageCodersManager sharedManager] addCoder:webPCoder];
+    [bgView sd_setImageWithURL:[NSURL URLWithString:@"http://10.200.4.12/download/test.webp"] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        NSLog(@"%@", error);
+    }];
 }
 
 
